@@ -4,10 +4,14 @@ A simple Ruby on Rails project hooking up with the Facebook Messenger Platform(B
 
 
 Have created a very basic RoR project with:
+```bash
 $ rails new learn_facebook_messenger_chatbot
+```
 
+```bash
 $ ruby -v
 ruby 2.3.0p0 (2015-12-25 revision 53290) [i686-linux]
+```
 
 
 web-hooks to get the Facebook integration done:
@@ -19,8 +23,9 @@ webhooks_facebook_messenger GET  /webhooks/facebook_messenger(.:format) webhooks
 ```
 
 to run:
+```bash
 $ fb_verify_token='ABC' fb_access_token='XYZ' ./bin/rails server &
-
+```
 
 SEE ALSO:
 https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/
