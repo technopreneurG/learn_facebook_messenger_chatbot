@@ -1,28 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A simple Ruby on Rails project hooking up with the Facebook Messenger Platform(Bots for Facebook Messenger)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Have created a very basic RoR project with:
+$ rails new learn_facebook_messenger_chatbot
+
+$ ruby -v
+ruby 2.3.0p0 (2015-12-25 revision 53290) [i686-linux]
+
+
+web-hooks to get the Facebook integration done:
+$ bin/rake routes
+                     Prefix Verb URI Pattern                            Controller#Action
+webhooks_facebook_messenger GET  /webhooks/facebook_messenger(.:format) webhooks/facebook_messenger#verify
+                            POST /webhooks/facebook_messenger(.:format) webhooks/facebook_messenger#chat
+
+
+to run:
+$ fb_verify_token='ABC' fb_access_token='XYZ' ./bin/rails server &
+
+
+SEE ALSO:
+https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/
+https://developers.facebook.com/docs/messenger-platform/quickstart
+Facebook Messenger bot 15 minute tutorial  https://github.com/jw84/messenger-bot-tutorial
