@@ -11,11 +11,12 @@ ruby 2.3.0p0 (2015-12-25 revision 53290) [i686-linux]
 
 
 web-hooks to get the Facebook integration done:
+```bash
 $ bin/rake routes
                      Prefix Verb URI Pattern                            Controller#Action
 webhooks_facebook_messenger GET  /webhooks/facebook_messenger(.:format) webhooks/facebook_messenger#verify
                             POST /webhooks/facebook_messenger(.:format) webhooks/facebook_messenger#chat
-
+```
 
 to run:
 $ fb_verify_token='ABC' fb_access_token='XYZ' ./bin/rails server &
