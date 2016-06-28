@@ -33,4 +33,4 @@ See Also:
 
 
 TODO:
-* Templates: Generic, Button, Receipt
+* Templates: Receipt
