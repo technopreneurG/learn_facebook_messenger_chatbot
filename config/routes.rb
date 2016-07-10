@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   namespace :webhooks do
     get 'facebook_messenger' => 'facebook_messenger#verify'
     post 'facebook_messenger' => 'facebook_messenger#chat'
+    get 'facebook_messenger_weather' => 'facebook_messenger_weather#verify'
+    post 'facebook_messenger_weather' => 'facebook_messenger_weather#chat'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -12,9 +12,9 @@ module Webhooks::FacebookMessengerHelper
             request.content_type = 'application/json'
             request.body = body.to_json
 
-            Rails.logger.debug request.body
+            Rails.logger.debug "request.body: #{request.body}"
             response = http.request(request)
-            Rails.logger.debug response.body
+            Rails.logger.debug "response.body: #{response.body}"
         rescue => e #todo: instead handle error response codes
             Rails.logger.warn "Error: #{e.message}"
             Rails.logger.warn e.backtrace
