@@ -16,9 +16,12 @@ $ bin/rails generate controller webhooks/facebook_messenger verify chat
 web-hooks for integration:
 ```bash
 $ bin/rake routes
-                     Prefix Verb URI Pattern                            Controller#Action
-webhooks_facebook_messenger GET  /webhooks/facebook_messenger(.:format) webhooks/facebook_messenger#verify
-                            POST /webhooks/facebook_messenger(.:format) webhooks/facebook_messenger#chat
+                             Prefix Verb URI Pattern                                    Controller#Action
+        webhooks_facebook_messenger GET  /webhooks/facebook_messenger(.:format)         webhooks/facebook_messenger#verify
+                                    POST /webhooks/facebook_messenger(.:format)         webhooks/facebook_messenger#chat
+webhooks_facebook_messenger_weather GET  /webhooks/facebook_messenger_weather(.:format) webhooks/facebook_messenger_weather#verify
+                                    POST /webhooks/facebook_messenger_weather(.:format) webhooks/facebook_messenger_weather#chat
+
 ```
 
 run:
@@ -30,7 +33,9 @@ See Also:
 - [How To Build Bots for Messenger](https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/)
 - [Messenger Platform: Getting Started](https://developers.facebook.com/docs/messenger-platform/quickstart)
 - [Facebook Messenger bot 15 minute tutorial](https://github.com/jw84/messenger-bot-tutorial)
-
+- [The example weather app on Wit.ai](https://wit.ai/girish/WeatherApp)
 
 TODO:
-* Templates: Receipt
+* Templates: Receipt, Quick replies
+* Error handling
+* Test cases
