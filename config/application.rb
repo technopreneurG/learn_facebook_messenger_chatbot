@@ -22,5 +22,12 @@ module LearnFacebookMessengerChatbot
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+
+    #IMP Note: hack to manage sessions
+    attr_reader :session
+    initializer "init temp session" do
+        @session = {}
+    end
   end
 end
